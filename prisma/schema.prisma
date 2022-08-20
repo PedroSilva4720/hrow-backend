@@ -11,13 +11,13 @@ datasource db {
 }
 
 model Rows {
-  id        String   @id @default(uuid())
+  id        String    @id @default(uuid())
   orderPad  String
   queue     Int?
   shortRow  Int?
   mediumRow Int?
   LongRow   Int?
-  date      DateTime
-
-  @@map("row")
+  createdAt DateTime
+  used      Boolean   @default(false)
+  usedAt    DateTime?
 }

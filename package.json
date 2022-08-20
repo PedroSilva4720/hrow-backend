@@ -12,8 +12,7 @@
     "start": "nodemon --exec babel-node src/index.js",
     "precommit": "git add .",
     "commit": "cz",
-    "postcommit": "git push",
-    "test": "git push -u origin development"
+    "postcommit": "git push"
   },
   "config": {
     "commitizen": {
