@@ -1,0 +1,33 @@
+{
+  "name": "hrow-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Pedro Silva",
+    "email": "pedro.silva4720@gmail.com"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js",
+    "precommit": "git add .",
+    "commit": "cz",
+    "postcommit": "git push -u origin development"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "prisma": "^4.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.17.10",
+    "@babel/node": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "commitizen": "^4.2.5",
+    "husky": "^8.0.1",
+    "nodemon": "^2.0.19"
+  }
+}
