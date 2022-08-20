@@ -12,9 +12,21 @@
     "start": "nodemon --exec babel-node src/index.js",
     "precommit": "git add .",
     "commit": "cz",
-    "postcommit": "git push -u origin development"
+    "postcommit": "git push",
+    "test": "git push -u origin development"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
   },
   "dependencies": {
+    "@prisma/client": "4.2.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
