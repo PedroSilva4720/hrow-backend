@@ -16,7 +16,7 @@ model Rows {
   queue     Int?
   shortRow  Int?
   mediumRow Int?
-  LongRow   Int?
+  longRow   Int?
   createdAt DateTime
   used      Boolean   @default(false)
   usedAt    DateTime?

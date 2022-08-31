@@ -3,9 +3,6 @@ import { prisma } from '../../../../prisma.js'
 export const createRow = async (req, res) => {
   const { ...data } = req.body
 
-  // console.log(req.body)
-  // return res.send('')
-
   try {
     const row = await prisma.rows.create({
       data: {
@@ -25,7 +22,9 @@ export const createRow = async (req, res) => {
 
 export const getRows = async (req, res) => {
   try {
-    const rows = await prisma.rows.findMany()
+    const rows = await prisma.rows
+      .findMany()
+      .then(item => item.filter(item => !item.used))
     return res.json(rows)
   } catch {
     throw new Error(
